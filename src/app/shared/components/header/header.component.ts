@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { ThemeService } from '@core/services/theme.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { ThemeService } from '@core/services/theme.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  onBurgerIconClicked = output();
   private _themeService = inject(ThemeService);
 
   /**
@@ -15,5 +16,9 @@ export class HeaderComponent {
    */
   public onToggleTheme() {
     this._themeService.toggleTheme();
+  }
+
+  onToggleSideNav() {
+    this.onBurgerIconClicked.emit();
   }
 }
