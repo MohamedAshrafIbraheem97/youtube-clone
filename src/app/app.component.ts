@@ -2,12 +2,12 @@ import { Component, inject, signal } from '@angular/core';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ThemeService } from '@core/services/theme.service';
 import { AsyncPipe } from '@angular/common';
-import { VideoCardComponent } from './video/component/video-card/video-card.component';
-import { RouterLink } from '@angular/router';
+import { VideoCardComponent } from './video/components/video-card/video-card.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, AsyncPipe, VideoCardComponent, RouterLink],
+  imports: [HeaderComponent, AsyncPipe, RouterOutlet, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

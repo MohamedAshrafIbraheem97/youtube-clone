@@ -1,13 +1,11 @@
 <main [attr.data-theme]="theme$ | async" class="h-full">
-  <div class="drawer md:drawer-open">
+  <div class="drawer lg:drawer-open">
     <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
       <!-- Navbar -->
       <app-header [drawerId]="'my-drawer-3'"></app-header>
       <!-- Page content here -->
-      <div class="grid grid-cols-4 grid-rows-3">
-        <app-video-card></app-video-card>
-      </div>
+      <router-outlet></router-outlet>
     </div>
     <div class="drawer-side">
       <label
