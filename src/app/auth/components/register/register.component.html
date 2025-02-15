@@ -1,0 +1,14 @@
+<app-auth-wrapper>
+  <ng-container card-title>Welcome to Youtube Clone</ng-container>
+  <ng-container card-desc>
+    Create an account to start uploading and watching videos.
+  </ng-container>
+  <button class="btn btn-primary w-full" primary-action (click)="register()">
+    Sign Up
+  </button>
+
+  <ng-container secondary-action>
+    Already have an account?
+    <a routerLink="/login" class="link link-primary">Log In</a>
+  </ng-container>
+</app-auth-wrapper>

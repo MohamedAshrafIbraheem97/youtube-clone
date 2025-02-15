@@ -1,0 +1,12 @@
+<app-auth-wrapper>
+  <ng-container card-title>Welcome back!</ng-container>
+  <ng-container card-desc>Log in to access your account.</ng-container>
+  <button class="btn btn-primary w-full" primary-action (click)="login()">
+    Log In
+  </button>
+
+  <ng-container secondary-action>
+    Don't have an account?
+    <a routerLink="/register" class="link link-primary">Sign Up</a>
+  </ng-container>
+</app-auth-wrapper>
