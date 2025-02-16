@@ -108,9 +108,16 @@
         </div>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          class="menu menu-sm dropdown-content bg-base-200 rounded-box z-[1] mt-3 w-52 p-2 shadow"
         >
-          <li><a (click)="onToggleTheme()">Change Theme</a></li>
+          <li>
+            <a (click)="onToggleTheme()">{{ "theme" | transloco }}</a>
+          </li>
+          <li>
+            <a (click)="changeLanguage()"
+              >{{ "changeTo" | transloco }} {{ otherLanguage() }}</a
+            >
+          </li>
         </ul>
       </div>
     </div>
